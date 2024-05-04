@@ -15,21 +15,27 @@
 </div>
 
 <div> 
-	<table>
-  <tr>
-    <th>Ma San Pham</th>
-    <th>Ten</th>
-    <th>Gia</th>
-  </tr>
-  @foreach (SanPham sp in Model.DanhSachSanPham)
-  {
-      <tr>
-        <td>@sp.MaSanPham</td>
-        <td>@sp.TenSanPham</td>
-        <td>@sp.Gia</td>
-      </tr>
-  }
-  </table>
+    <table>
+        <tr>
+            <th>Ma San Pham</th>
+            <th>Ten</th>
+            <th>Gia</th>
+            <th>Xoá</th> <!-- Thêm cột mới cho nút "Xoá" -->
+        </tr>
+        @foreach (SanPham sp in Model.DanhSachSanPham)
+        {
+            <tr>
+                <td>@sp.MaSanPham</td>
+                <td>@sp.TenSanPham</td>
+                <td>@sp.Gia</td>
+                <td>
+                    <!-- Thêm nút "Xoá" với đường dẫn đến trang MH_Xoa_SanPham và truyền mã sản phẩm -->
+                    <a href="MH_Xoa_SanPham?maSanPhamInput=@sp.MaSanPham&TuKhoa=@sp.TenSanPham">Xoá</a>
+                </td>
+            </tr>
+        }
+    </table>
 </div>
+
 
 @Model.Chuoi

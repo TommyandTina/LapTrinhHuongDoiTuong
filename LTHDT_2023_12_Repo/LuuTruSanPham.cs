@@ -24,13 +24,6 @@ namespace LTHDT_2023_12_Repo
             return dsSanPham;
         }
 
-        public void ThemSanPham(SanPham sanPham)
-        {
-            var dssp = DocDanhSachSanPham();
-            dssp.Add(sanPham);
-            LuuDanhSachSanPham(dssp);
-        }
-
         public List<SanPham> LuuDanhSachSanPham(List<SanPham> dsSanPham)
         {
             StreamWriter file = new StreamWriter(_filePath);
@@ -42,6 +35,23 @@ namespace LTHDT_2023_12_Repo
 
             file.Close();
             return dsSanPham;
+        }
+        public void ThemSanPham(SanPham sanPham)
+        {
+            var dssp = DocDanhSachSanPham();
+            dssp.Add(sanPham);
+            LuuDanhSachSanPham(dssp);
+        }
+
+        public void XoaSanPham(int maSanPham)
+        {
+            var dssp = DocDanhSachSanPham();
+            var sanPham = dssp.FirstOrDefault(sp => sp.MaSanPham == maSanPham);
+            if (sanPham != null)
+            {
+                dssp.Remove(sanPham);
+                LuuDanhSachSanPham(dssp);
+            }
         }
     }
 }

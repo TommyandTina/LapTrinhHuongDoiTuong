@@ -11,6 +11,7 @@ namespace LTHDT_2023_12_Services
         {
             List<SanPham> kq = new List<SanPham>();
             var dssp  = _luuTruSanPham.DocDanhSachSanPham();
+            //Search danhsachsanpham
             foreach (var sp in dssp)
             {
                 if (sp.TenSanPham.Contains(tukhoa))
@@ -34,6 +35,20 @@ namespace LTHDT_2023_12_Services
             }
             sanPham.MaSanPham = maxId + 1;
             _luuTruSanPham.ThemSanPham(sanPham);
+        }
+
+        public int XoaSanPham(int maSanPham)
+        {
+            var dssp = _luuTruSanPham.DocDanhSachSanPham();
+            foreach (var sp in dssp)
+            {
+                if(sp.MaSanPham == maSanPham)
+                {
+                    _luuTruSanPham.XoaSanPham(maSanPham);
+                    return 1;
+                }
+            }
+            return -1;
         }
     }
 }
