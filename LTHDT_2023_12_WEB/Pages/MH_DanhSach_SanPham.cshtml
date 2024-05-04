@@ -21,6 +21,7 @@
             <th>Ten</th>
             <th>Gia</th>
             <th>Xoá</th> <!-- Thêm cột mới cho nút "Xoá" -->
+            <th>Sửa</th> <!-- Thêm cột mới cho nút "Sửa" -->
         </tr>
         @foreach (SanPham sp in Model.DanhSachSanPham)
         {
@@ -31,6 +32,10 @@
                 <td>
                     <!-- Thêm nút "Xoá" với đường dẫn đến trang MH_Xoa_SanPham và truyền mã sản phẩm -->
                     <a href="MH_Xoa_SanPham?maSanPhamInput=@sp.MaSanPham&TuKhoa=@sp.TenSanPham">Xoá</a>
+                </td>
+                <td>
+                    <!-- Thêm nút "Sửa" với đường dẫn đến trang MH_Sua_SanPham và truyền mã sản phẩm -->
+                    <a href="MH_Sua_SanPham?maSanPhamInput=@sp.MaSanPham&TuKhoa=@sp.TenSanPham">Sửa</a>
                 </td>
             </tr>
         }

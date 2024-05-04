@@ -12,5 +12,6 @@ namespace LTHDT_2023_12_Repo
         List<SanPham> DocDanhSachSanPham();
         void ThemSanPham(SanPham sanPham);
         void XoaSanPham(int maSanPham);
+        void SuaSanPham(SanPham sanPhamInput);
     }
 }

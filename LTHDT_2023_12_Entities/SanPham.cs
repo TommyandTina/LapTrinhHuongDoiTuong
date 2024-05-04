@@ -26,5 +26,24 @@
             TenSanPham = tenSanPham;
             Gia = gia;
         }
+
+        public SanPham(int maSanPham,string tenSanPham, int gia)
+        {
+            if(maSanPham <= 0)
+            {
+                throw new Exception("Ma san pham khong hop le");
+            }
+            if (string.IsNullOrEmpty(tenSanPham))
+            {
+                throw new Exception("Ten khong hop le");
+            }
+            if (gia <= 0)
+            {
+                throw new Exception("Gia khong hop le");
+            }
+            MaSanPham = maSanPham;
+            TenSanPham = tenSanPham;
+            Gia = gia;
+        }
     }
 }

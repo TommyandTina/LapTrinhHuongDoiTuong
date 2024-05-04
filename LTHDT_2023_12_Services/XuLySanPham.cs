@@ -50,5 +50,11 @@ namespace LTHDT_2023_12_Services
             }
             return -1;
         }
+
+        public void SuaSanPham(SanPham sanPham)
+        {
+            int maSanPham = sanPham.MaSanPham;
+            _luuTruSanPham.SuaSanPham(sanPham);
+        }
     }
 }

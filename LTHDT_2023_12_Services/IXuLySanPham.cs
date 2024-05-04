@@ -13,5 +13,6 @@ namespace LTHDT_2023_12_Services
         List<SanPham> DocDanhSachSanPham(string tuKhoa = "");
         void ThemSanPham(SanPham sanPham);
         int XoaSanPham(int maSanPham);
+        void SuaSanPham(SanPham sanPham);
     }
 }

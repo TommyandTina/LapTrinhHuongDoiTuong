@@ -53,5 +53,18 @@ namespace LTHDT_2023_12_Repo
                 LuuDanhSachSanPham(dssp);
             }
         }
+
+        public void SuaSanPham(SanPham sanPhamInput)
+        {
+            var dssp = DocDanhSachSanPham();
+            int maSanPham = sanPhamInput.MaSanPham;
+            var sanPham = dssp.FirstOrDefault(sp => sp.MaSanPham == maSanPham);
+            if (sanPham != null)
+            {
+                sanPham.TenSanPham = sanPhamInput.TenSanPham;
+                sanPham.Gia = sanPhamInput.Gia;
+                LuuDanhSachSanPham(dssp);
+            }
+        }
     }
 }

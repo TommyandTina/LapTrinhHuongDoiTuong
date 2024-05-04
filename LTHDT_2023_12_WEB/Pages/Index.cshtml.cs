@@ -14,7 +14,7 @@ namespace LTHDT_2023_12_WEB.Pages
 
         public void OnGet()
         {
-
+            Response.Redirect("/MH_DanhSach_SanPham");
         }
     }
 }
