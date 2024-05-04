@@ -12,5 +12,6 @@ namespace LTHDT_2023_12_Services
         //bắt buộc trả về list sản phẩm khi sd interface này
         List<SanPham> DocDanhSachSanPham(string tuKhoa = "");
         void ThemSanPham(SanPham sanPham);
+        int XoaSanPham(int maSanPham);
     }
 }
