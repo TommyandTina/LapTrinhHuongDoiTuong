@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laptrinhhuongdoituong2", "laptrinhhuongdoituong2\laptrinhhuongdoituong2.csproj", "{E32D466A-92DA-41DE-84A3-900890E49979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laptrinhhuongdoituong3_tinhkethua", "laptrinhhuongdoituong3_tinhkethua\laptrinhhuongdoituong3_tinhkethua.csproj", "{2A5AF900-0065-47F6-93DB-C33FE73B21DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laptrinhhuongdoituong4_HinhTron_HinhChuNhat", "laptrinhhuongdoituong4_HinhTron_HinhChuNhat\laptrinhhuongdoituong4_HinhTron_HinhChuNhat.csproj", "{B9D03DD6-EDBE-4815-BEB6-E800B9A88718}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTHDT_2023_12_WEB", "LTHDT_2023_12_WEB\LTHDT_2023_12_WEB.csproj", "{01B2C0DF-4AA4-4A8B-86B6-4307CA8E7D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTHDT_2023_12_Services", "LTHDT_2023_12_Services\LTHDT_2023_12_Services.csproj", "{12357992-2357-4065-824D-0275816BF86F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTHDT_2023_12_Repo", "LTHDT_2023_12_Repo\LTHDT_2023_12_Repo.csproj", "{36C63B48-8CA2-477B-B054-1069D9BCE155}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTHDT_2023_12_Entities", "LTHDT_2023_12_Entities\LTHDT_2023_12_Entities.csproj", "{F0010D3B-E26A-44B8-9A40-CDEDB787E8EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E32D466A-92DA-41DE-84A3-900890E49979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32D466A-92DA-41DE-84A3-900890E49979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32D466A-92DA-41DE-84A3-900890E49979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32D466A-92DA-41DE-84A3-900890E49979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5AF900-0065-47F6-93DB-C33FE73B21DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5AF900-0065-47F6-93DB-C33FE73B21DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5AF900-0065-47F6-93DB-C33FE73B21DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5AF900-0065-47F6-93DB-C33FE73B21DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D03DD6-EDBE-4815-BEB6-E800B9A88718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D03DD6-EDBE-4815-BEB6-E800B9A88718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D03DD6-EDBE-4815-BEB6-E800B9A88718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D03DD6-EDBE-4815-BEB6-E800B9A88718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B2C0DF-4AA4-4A8B-86B6-4307CA8E7D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B2C0DF-4AA4-4A8B-86B6-4307CA8E7D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B2C0DF-4AA4-4A8B-86B6-4307CA8E7D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B2C0DF-4AA4-4A8B-86B6-4307CA8E7D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12357992-2357-4065-824D-0275816BF86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12357992-2357-4065-824D-0275816BF86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12357992-2357-4065-824D-0275816BF86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12357992-2357-4065-824D-0275816BF86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36C63B48-8CA2-477B-B054-1069D9BCE155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C63B48-8CA2-477B-B054-1069D9BCE155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C63B48-8CA2-477B-B054-1069D9BCE155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C63B48-8CA2-477B-B054-1069D9BCE155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0010D3B-E26A-44B8-9A40-CDEDB787E8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0010D3B-E26A-44B8-9A40-CDEDB787E8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0010D3B-E26A-44B8-9A40-CDEDB787E8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0010D3B-E26A-44B8-9A40-CDEDB787E8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87BBCC3C-83F3-4EF2-AF7E-94DC906C5B3F}
+	EndGlobalSection
+EndGlobal
