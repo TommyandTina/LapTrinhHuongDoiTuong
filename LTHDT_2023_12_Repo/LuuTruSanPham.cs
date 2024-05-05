@@ -30,7 +30,7 @@ namespace LTHDT_2023_12_Repo
             file.WriteLine(dsSanPham.Count);
             foreach (var sp in dsSanPham)
             {
-                file.WriteLine($"{sp.MaSanPham},{sp.TenSanPham},{sp.Gia}");
+                file.WriteLine($"{sp.MaSanPham},{sp.TenSanPham},{sp.Gia},{sp.HanSuDung},{sp.CongTySanXuat},{sp.NamSanXuat},{sp.LoaiSanPham}");
             }
 
             file.Close();
@@ -61,8 +61,8 @@ namespace LTHDT_2023_12_Repo
             var sanPham = dssp.FirstOrDefault(sp => sp.MaSanPham == maSanPham);
             if (sanPham != null)
             {
-                sanPham.TenSanPham = sanPhamInput.TenSanPham;
-                sanPham.Gia = sanPhamInput.Gia;
+                sanPham.CopyFrom(sanPhamInput);
+
                 LuuDanhSachSanPham(dssp);
             }
         }

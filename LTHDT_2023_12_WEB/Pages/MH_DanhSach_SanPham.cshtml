@@ -20,6 +20,10 @@
             <th>Ma San Pham</th>
             <th>Ten</th>
             <th>Gia</th>
+            <th>Hạn Sử Dụng</th>
+            <th>Công Ty Sản Xuất</th>
+            <th>Năm Sản Xuất</th>
+            <th>Loại Sản Phẩm</th>
             <th>Xoá</th> <!-- Thêm cột mới cho nút "Xoá" -->
             <th>Sửa</th> <!-- Thêm cột mới cho nút "Sửa" -->
         </tr>
@@ -29,6 +33,10 @@
                 <td>@sp.MaSanPham</td>
                 <td>@sp.TenSanPham</td>
                 <td>@sp.Gia</td>
+                <td>@sp.HanSuDung</td>
+                <td>@sp.CongTySanXuat</td>
+                <td>@sp.NamSanXuat</td>
+                <td>@sp.LoaiSanPham</td>
                 <td>
                     <!-- Thêm nút "Xoá" với đường dẫn đến trang MH_Xoa_SanPham và truyền mã sản phẩm -->
                     <a href="MH_Xoa_SanPham?maSanPhamInput=@sp.MaSanPham&TuKhoa=@sp.TenSanPham">Xoá</a>

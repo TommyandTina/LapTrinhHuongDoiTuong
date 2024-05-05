@@ -3,13 +3,23 @@
 @using LTHDT_2023_12_Entities
 @{
 }
+
+
 <form method="post">
-  <label for="fname">Mã sản phẩm hiện tại:</label><br>
-  <input type="text" id="khongquantrong" name="maSanPham" value="@Model.maSanPham" readonly><br>
+  <label for="fname">Mã sản phẩm hiện tại: @Model.maSanPham</label><br>
+  @*<input type="text" id="khongquantrong" name="maSanPham" value="@Model.maSanPham" readonly><br>*@
   <label for="fname">Tên sản phẩm mới:</label><br>
   <input type="text" id="khongquantrong" name="tenSanPham" value="@Model.tenSanPham" ><br>
   <label for="fname">Giá mới:</label><br>
   <input type="text" id="khongquantrong" name="giaSanPham" value="@Model.giaSanPham" ><br>
+     <label for="fname">Hạn sử dụng:</label><br>
+  <input type="text" id="khongquantrong" name="HanSuDung" value="@Model.HanSuDung"><br>
+  <label for="fname">Công ty sản xuất:</label><br>
+  <input type="text" id="khongquantrong" name="CongTySanXuat" value="@Model.CongTySanXuat"><br>
+   <label for="fname">Năm sản xuất:</label><br>
+  <input type="text" id="khongquantrong" name="NamSanXuat" value="@Model.NamSanXuat"><br>
+  <label for="fname">Loại sản phẩm:</label><br>
+  <input type="text" id="khongquantrong" name="LoaiSanPham" value="@Model.LoaiSanPham"><br>
   <input type="submit" value="Thay đổi">
 </form>
 
