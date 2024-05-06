@@ -14,7 +14,15 @@
    <label for="fname">Năm sản xuất:</label><br>
   <input type="text" id="khongquantrong" name="NamSanXuat" value=""><br>
   <label for="fname">Loại sản phẩm:</label><br>
-  <input type="text" id="khongquantrong" name="LoaiSanPham" value=""><br>
+  @*<input type="text" id="khongquantrong" name="LoaiSanPham" value=""><br>*@
+
+<select name="LoaiSanPham">
+    @foreach (var loaiSanPham in Model.DanhSachLoaiSanPham)
+    {
+        <option value="@loaiSanPham.loaiSanPham">@loaiSanPham.loaiSanPham</option>
+    }
+</select><br>
+
   <input type="submit" value="Thêm">
 </form> 
 

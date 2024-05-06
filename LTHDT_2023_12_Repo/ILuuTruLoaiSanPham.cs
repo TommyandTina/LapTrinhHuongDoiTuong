@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LTHDT_2023_12_Repo
 {
-    internal interface ILuuTruLoaiSanPham
+    public interface ILuuTruLoaiSanPham
     {
         List<LoaiSanPham> DocDanhSachLoaiSanPham();
         void ThemLoaiSanPham(LoaiSanPham loaiSanPham);

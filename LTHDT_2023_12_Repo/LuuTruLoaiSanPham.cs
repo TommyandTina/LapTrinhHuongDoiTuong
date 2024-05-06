@@ -35,7 +35,7 @@ namespace LTHDT_2023_12_Repo
             file.WriteLine(dsLoaiSanPham.Count);
             foreach (var sp in dsLoaiSanPham)
             {
-                file.WriteLine($"{sp.MaLoaiSanPham},{sp.LoaiSanPham}");
+                file.WriteLine($"{sp.MaLoaiSanPham},{sp.loaiSanPham}");
             }
 
             file.Close();
