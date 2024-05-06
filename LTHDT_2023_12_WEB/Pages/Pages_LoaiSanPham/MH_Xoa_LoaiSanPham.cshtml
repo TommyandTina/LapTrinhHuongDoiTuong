@@ -1,0 +1,34 @@
+﻿@page
+@using LTHDT_2023_12_Entities
+@model LTHDT_2023_12_WEB.Pages.Pages_LoaiSanPham.MH_Xoa_LoaiSanPhamModel
+@{
+}
+<form method="post">
+  <label for="fname">Mã Sản Phẩm:</label><br>
+  <input type="text" id="khongquantrong" name="maLoaiSanPham" value="@Model.maLoaiSanPham" readonly><br>
+  <input type="submit" value="Chắc chắn Xoá">
+</form>
+
+@*@if (@Model.maLoaiSanPham != 0)
+{
+    <div> 
+        <table>
+            <tr>
+                <th>Ma Loai San Pham</th>
+                <th>Loại Sản Phẩm</th>
+            </tr>
+            @foreach (LoaiSanPham sp in Model.DanhSachLoaiSanPham)
+            {
+                <tr>
+                    <td>@sp.MaLoaiSanPham</td>
+                    <td>@sp.loaiSanPham</td>
+                </tr>
+            }
+        </table>
+    </div>
+}*@
+
+<div>
+    <a href="MH_DanhSach_LoaiSanPham">Không xoá, trở về danh sách</a>
+</div>
+@Model.Chuoi

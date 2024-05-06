@@ -7,6 +7,22 @@
   <input type="text" id="khongquantrong" name="TenSp" value=""><br>
   <label for="fname">Giá:</label><br>
   <input type="text" id="khongquantrong" name="Gia" value=""><br>
+   <label for="fname">Hạn sử dụng:</label><br>
+  <input type="text" id="khongquantrong" name="HanSuDung" value=""><br>
+  <label for="fname">Công ty sản xuất:</label><br>
+  <input type="text" id="khongquantrong" name="CongTySanXuat" value=""><br>
+   <label for="fname">Năm sản xuất:</label><br>
+  <input type="text" id="khongquantrong" name="NamSanXuat" value=""><br>
+  <label for="fname">Loại sản phẩm:</label><br>
+  @*<input type="text" id="khongquantrong" name="LoaiSanPham" value=""><br>*@
+
+<select name="LoaiSanPham">
+    @foreach (var loaiSanPham in Model.DanhSachLoaiSanPham)
+    {
+        <option value="@loaiSanPham.loaiSanPham">@loaiSanPham.loaiSanPham</option>
+    }
+</select><br>
+
   <input type="submit" value="Thêm">
 </form> 
 

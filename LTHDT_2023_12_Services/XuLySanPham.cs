@@ -53,7 +53,6 @@ namespace LTHDT_2023_12_Services
 
         public void SuaSanPham(SanPham sanPham)
         {
-            int maSanPham = sanPham.MaSanPham;
             _luuTruSanPham.SuaSanPham(sanPham);
         }
     }
