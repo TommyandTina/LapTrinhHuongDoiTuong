@@ -18,8 +18,16 @@
   <input type="text" id="khongquantrong" name="CongTySanXuat" value="@Model.CongTySanXuat"><br>
    <label for="fname">Năm sản xuất:</label><br>
   <input type="text" id="khongquantrong" name="NamSanXuat" value="@Model.NamSanXuat"><br>
-  <label for="fname">Loại sản phẩm:</label><br>
-  <input type="text" id="khongquantrong" name="LoaiSanPham" value="@Model.LoaiSanPham"><br>
+  <label for="fname">Loại Sản Phẩm hiện tại : @Model.LoaiSanPham</label><br>
+  @*<input type="text" id="khongquantrong" name="LoaiSanPham" value="@Model.LoaiSanPham"><br>*@
+  <select name="LoaiSanPham">
+    @foreach (var loaiSanPham in Model.DanhSachLoaiSanPham)
+    {
+        <option value="@loaiSanPham.loaiSanPham">@loaiSanPham.loaiSanPham</option>
+    }
+  </select><br>
+  <label for="fname">Số Lượng:</label><br>
+  <input type="text" id="khongquantrong" name="SoLuong" value="@Model.SoLuong" readonly><br>
   <input type="submit" value="Thay đổi">
 </form>
 

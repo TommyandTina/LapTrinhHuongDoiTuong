@@ -34,6 +34,7 @@ namespace LTHDT_2023_12_Services
                 }
             }
             sanPham.MaSanPham = maxId + 1;
+            sanPham.SoLuong = 0;
             _luuTruSanPham.ThemSanPham(sanPham);
         }
 

@@ -24,6 +24,7 @@
             <th>Công Ty Sản Xuất</th>
             <th>Năm Sản Xuất</th>
             <th>Loại Sản Phẩm</th>
+            <th>Số Lượng</th>
             <th>Xoá</th> <!-- Thêm cột mới cho nút "Xoá" -->
             <th>Sửa</th> <!-- Thêm cột mới cho nút "Sửa" -->
         </tr>
@@ -37,6 +38,7 @@
                 <td>@sp.CongTySanXuat</td>
                 <td>@sp.NamSanXuat</td>
                 <td>@sp.LoaiSanPham</td>
+                <td>@sp.SoLuong</td>
                 <td>
                     <!-- Thêm nút "Xoá" với đường dẫn đến trang MH_Xoa_SanPham và truyền mã sản phẩm -->
                     <a href="MH_Xoa_SanPham?maSanPhamInput=@sp.MaSanPham&TuKhoa=@sp.TenSanPham">Xoá</a>

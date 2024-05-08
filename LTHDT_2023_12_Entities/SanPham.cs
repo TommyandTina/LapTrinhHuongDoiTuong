@@ -9,6 +9,7 @@
         public string CongTySanXuat { get; set; }
         public int NamSanXuat { get; set; }
         public string LoaiSanPham { get; set; }
+        public int SoLuong { get; set; }
         public SanPham()
         {
         }
@@ -22,7 +23,7 @@
             CongTySanXuat = m[4];
             NamSanXuat = int.Parse(m[5]);
             LoaiSanPham = m[6];
-
+            SoLuong = int.Parse(m[7]);
         }
 
         public SanPham(string tenSanPham, int gia, int hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham)
@@ -61,7 +62,7 @@
         }
 
 
-        public SanPham(int maSanPham,string tenSanPham, int gia, int hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham)
+        public SanPham(int maSanPham,string tenSanPham, int gia, int hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham, int soLuong)
         {
             if(maSanPham <= 0)
             {
@@ -91,6 +92,10 @@
             {
                 throw new Exception("loai san pham khong hop le");
             }
+            if (soLuong < 0)
+            {
+                throw new Exception("so luong khong hop le");
+            }
             MaSanPham = maSanPham;
             TenSanPham = tenSanPham;
             Gia = gia;
@@ -98,6 +103,7 @@
             CongTySanXuat = congTySanXuat;
             NamSanXuat = namSanXuat;
             LoaiSanPham = loaiSanPham;
+            SoLuong = soLuong;
         }
 
         public void CopyFrom(SanPham other)
@@ -109,6 +115,7 @@
             CongTySanXuat = other.CongTySanXuat;
             NamSanXuat = other.NamSanXuat;
             LoaiSanPham = other.LoaiSanPham;
+            SoLuong = other.SoLuong;
         }
     }
 }

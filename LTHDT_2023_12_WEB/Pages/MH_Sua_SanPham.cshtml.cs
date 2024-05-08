@@ -23,13 +23,17 @@ namespace LTHDT_2023_12_WEB.Pages
         public int NamSanXuat { get; set; }
         [BindProperty]
         public string LoaiSanPham { get; set; }
+        [BindProperty]
+        public int SoLuong { get; set; }
 
         public string Chuoi { get; set; } = string.Empty;
         public int found { get; set; } = 0;
 
-        private IXuLySanPham _xuLySanPham = new XuLySanPham();
-        public List<SanPham> DanhSachSanPham;
 
+        private IXuLySanPham _xuLySanPham = new XuLySanPham();
+        private IXuLyLoaiSanPham _xuLyLoaiSanPham = new XuLyLoaiSanPham();
+        public List<SanPham> DanhSachSanPham;
+        public List<LoaiSanPham> DanhSachLoaiSanPham;
 
         public void OnGet(int maSanPhamInput, string TuKhoa)
         {
@@ -42,6 +46,9 @@ namespace LTHDT_2023_12_WEB.Pages
             CongTySanXuat = DanhSachSanPham[0].CongTySanXuat;
             NamSanXuat = DanhSachSanPham[0].NamSanXuat;
             LoaiSanPham = DanhSachSanPham[0].LoaiSanPham;
+            SoLuong = DanhSachSanPham[0].SoLuong;
+
+            DanhSachLoaiSanPham = _xuLyLoaiSanPham.DocDanhSachLoaiSanPham();
             //if (TempData.TryGetValue("tenSanPham", out object tempTenSanPham))
             //{
             //    tenSanPham = (string)tempTenSanPham;
@@ -54,10 +61,10 @@ namespace LTHDT_2023_12_WEB.Pages
 
         public void OnPost()
         {
-
+            DanhSachLoaiSanPham = _xuLyLoaiSanPham.DocDanhSachLoaiSanPham();
             try
             {
-                SanPham sanPham = new SanPham(maSanPham, tenSanPham, giaSanPham,HanSuDung,CongTySanXuat,NamSanXuat,LoaiSanPham);
+                SanPham sanPham = new SanPham(maSanPham, tenSanPham, giaSanPham,HanSuDung,CongTySanXuat,NamSanXuat,LoaiSanPham,SoLuong);
                 _xuLySanPham.SuaSanPham(sanPham);
             }
             catch (Exception ex)

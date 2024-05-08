@@ -30,7 +30,7 @@ namespace LTHDT_2023_12_Repo
             file.WriteLine(dsSanPham.Count);
             foreach (var sp in dsSanPham)
             {
-                file.WriteLine($"{sp.MaSanPham},{sp.TenSanPham},{sp.Gia},{sp.HanSuDung},{sp.CongTySanXuat},{sp.NamSanXuat},{sp.LoaiSanPham}");
+                file.WriteLine($"{sp.MaSanPham},{sp.TenSanPham},{sp.Gia},{sp.HanSuDung},{sp.CongTySanXuat},{sp.NamSanXuat},{sp.LoaiSanPham},{sp.SoLuong}");
             }
 
             file.Close();
