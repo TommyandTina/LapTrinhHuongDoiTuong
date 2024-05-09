@@ -1,0 +1,25 @@
+﻿@page
+@model LTHDT_2023_12_WEB.Pages.Pages_HoaDonBanHang.MH_Them_HoaDonBanHangModel
+@{
+}
+
+
+<form method="post">
+  <label for="customerName">Tên người mua:</label><br>
+  <input type="text" id="customerName" name="TenNguoiMua" value="@Model.TenNguoiMua"><br>
+    <label for="productId">Chọn sản phẩm:</label><br>
+    <select id="productId" name="tenSanPham">
+        @foreach (var product in Model.DanhSachSanPham)
+        {
+            <option value="@product.TenSanPham">@product.TenSanPham - Giá : @product.Gia</option>
+        }
+    </select><br>
+
+  <label for="quantity">Số lượng mua:</label><br>
+  <input type="number" id="quantity" name="SoLuongMua" value="@Model.SoLuongMua"><br>
+  <label for="totalPrice">Thành tiền:</label><br>
+  <input type="number" id="totalPrice" name="ThanhTien" value="@Model.ThanhTien" ><br>
+  <input type="submit" value="Thêm">
+</form> 
+
+@Model.Chuoi

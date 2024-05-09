@@ -64,7 +64,7 @@ namespace LTHDT_2023_12_WEB.Pages
             DanhSachLoaiSanPham = _xuLyLoaiSanPham.DocDanhSachLoaiSanPham();
             try
             {
-                SanPham sanPham = new SanPham(maSanPham, tenSanPham, giaSanPham,HanSuDung,CongTySanXuat,NamSanXuat,LoaiSanPham,SoLuong);
+                SanPham sanPham = new SanPham(maSanPham, tenSanPham, giaSanPham, HanSuDung, CongTySanXuat, NamSanXuat, LoaiSanPham, SoLuong);
                 _xuLySanPham.SuaSanPham(sanPham);
             }
             catch (Exception ex)
