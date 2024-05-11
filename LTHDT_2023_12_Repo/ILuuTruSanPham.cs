@@ -13,5 +13,8 @@ namespace LTHDT_2023_12_Repo
         void ThemSanPham(SanPham sanPham);
         void XoaSanPham(int maSanPham);
         void SuaSanPham(SanPham sanPhamInput);
+        //neu them thi so luong them vao la so duong, con giam thi la so am
+        void CapNhatSoLuongSanPham(int maSanPham, int soLuongDuocThemVao);
+
     }
 }

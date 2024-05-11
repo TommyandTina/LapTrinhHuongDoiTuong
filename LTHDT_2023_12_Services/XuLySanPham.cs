@@ -56,5 +56,19 @@ namespace LTHDT_2023_12_Services
         {
             _luuTruSanPham.SuaSanPham(sanPham);
         }
+
+        public int CapNhatSoLuongSanPham(int maSanPham, int soLuongDuocThemVao)
+        {
+            var dssp = _luuTruSanPham.DocDanhSachSanPham();
+            foreach (var sp in dssp)
+            {
+                if (sp.MaSanPham == maSanPham)
+                {
+                    _luuTruSanPham.CapNhatSoLuongSanPham(maSanPham,soLuongDuocThemVao);
+                    return 1;
+                }
+            }
+            return 0;
+        }
     }
 }

@@ -1,0 +1,30 @@
+﻿@page
+@model LTHDT_2023_12_WEB.Pages.Pages_HoaDonNhapHang.MH_SuaHoaDonNhapHangModel
+@using LTHDT_2023_12_Entities
+@{
+}
+
+
+<form method="post">
+  <label for="fname">Mã hoá đơn hiện tại: @Model.maHoaDon</label><br>
+  <input type="text" id="khongquantrong" name="maHoaDon" value="@Model.maHoaDon" readonly><br>
+  <label for="customerName">Tên Công Ty bán:</label><br>
+  <input type="text" id="customerName" name="TenCongTyBan" value="@Model.TenCongTyBan"><br>
+  <label for="productName">Tên sản phẩm:</label><br>
+  <input type="text" id="productName" name="sanPham.TenSanPham" value="@Model.sanPham.TenSanPham" readonly><br>
+  <label for="productName">Giá sản phẩm:</label><br>
+  <input type="text" id="productName" name="sanPham.Gia" value="@Model.sanPham.Gia" readonly><br>
+  <label for="productName">Mã sản phẩm:</label><br>
+  <input type="text" id="productName" name="sanPham.MaSanPham" value="@Model.sanPham.MaSanPham" readonly><br>
+  <label for="quantity">Số lượng nhập:</label><br>
+  <input type="number" id="quantity" name="SoLuongNhap" value="@Model.SoLuongNhap"><br>
+  <label for="totalPrice">Thành tiền:</label><br>
+  <input type="number" id="totalPrice" name="ThanhTien" value="@Model.ThanhTien" ><br>
+  <input type="submit" value="Thay đổi">
+</form>
+
+
+<div>
+    <a href="MH_DanhSach_HoaDonNhapHang">Không đổi nữa, trở về danh sách</a>
+</div>
+@Model.Chuoi
