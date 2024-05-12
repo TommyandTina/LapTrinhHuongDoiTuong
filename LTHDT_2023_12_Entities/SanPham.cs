@@ -5,7 +5,7 @@
         public int MaSanPham { get; set; }
         public string TenSanPham { get; set; }
         public int Gia { get; set; }
-        public int HanSuDung { get; set; }
+        public string HanSuDung { get; set; }
         public string CongTySanXuat { get; set; }
         public int NamSanXuat { get; set; }
         public string LoaiSanPham { get; set; }
@@ -19,14 +19,14 @@
             MaSanPham = int.Parse(m[0]);
             TenSanPham = m[1];
             Gia = int.Parse(m[2]);
-            HanSuDung = int.Parse(m[3]);
+            HanSuDung = m[3];
             CongTySanXuat = m[4];
             NamSanXuat = int.Parse(m[5]);
             LoaiSanPham = m[6];
             SoLuong = int.Parse(m[7]);
         }
 
-        public SanPham(string tenSanPham, int gia, int hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham)
+        public SanPham(string tenSanPham, int gia, string hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham)
         {
             if (string.IsNullOrEmpty(tenSanPham))
             {
@@ -36,7 +36,7 @@
             {
                 throw new Exception("Gia khong hop le");
             }
-            if (hanSuDung <= 0)
+            if (string.IsNullOrEmpty(hanSuDung))
             {
                 throw new Exception("Dan su dung khong hop le");
             }
@@ -62,7 +62,7 @@
         }
 
 
-        public SanPham(int maSanPham,string tenSanPham, int gia, int hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham, int soLuong)
+        public SanPham(int maSanPham,string tenSanPham, int gia, string hanSuDung, string congTySanXuat, int namSanXuat, string loaiSanPham, int soLuong)
         {
             if(maSanPham <= 0)
             {
@@ -76,7 +76,7 @@
             {
                 throw new Exception("Gia khong hop le");
             }
-            if (hanSuDung <= 0)
+            if (string.IsNullOrEmpty(hanSuDung))
             {
                 throw new Exception("Dan su dung khong hop le");
             }

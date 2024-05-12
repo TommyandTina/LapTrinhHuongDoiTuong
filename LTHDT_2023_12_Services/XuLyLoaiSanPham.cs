@@ -60,5 +60,28 @@ namespace LTHDT_2023_12_Services
             _luuTruLoaiSanPham.SuaLoaiSanPham(loaiSanPham);
         }
 
+        public void KiemTraTenLoaiSanPham(string tenLoaiSanPham)
+        {
+            var dslsp = _luuTruLoaiSanPham.DocDanhSachLoaiSanPham();
+            foreach (var lsp in dslsp)
+            {
+                if (lsp.loaiSanPham == tenLoaiSanPham)
+                {
+                    throw new Exception("Ten loai san pham da ton tai");
+                }
+            }
+        }
+
+        public void KiemTraTenLoaiSanPham(string tenLoaiSanPhamMoi, string tenLoaiSanPhamHienTai)
+        {
+            var dslsp = _luuTruLoaiSanPham.DocDanhSachLoaiSanPham();
+            foreach (var lsp in dslsp)
+            {
+                if (lsp.loaiSanPham == tenLoaiSanPhamMoi && lsp.loaiSanPham != tenLoaiSanPhamHienTai)
+                {
+                    throw new Exception("Ten loai san pham da ton tai");
+                }
+            }
+        }
     }
 }
