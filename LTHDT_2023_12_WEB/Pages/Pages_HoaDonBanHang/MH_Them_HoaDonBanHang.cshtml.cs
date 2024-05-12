@@ -35,6 +35,7 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_HoaDonBanHang
                 sanPham = new SanPham();
                 sanPham = _xuLySanPham.DocDanhSachSanPham(tenSanPham)[0];
                 var hdbh = new HoaDonBanHang(sanPham.MaSanPham,sanPham.TenSanPham,sanPham.Gia,TenNguoiMua,SoLuongMua,ThanhTien);//put any num here to distinc LoaiSanPham constructor
+                _xuLySanPham.CapNhatSoLuongSanPham(sanPham.MaSanPham, -SoLuongMua);
                 _xuLyLoaiSanPham.ThemHoaDon(hdbh);
                 Response.Redirect("MH_DanhSach_HoaDonBanHang");
             }

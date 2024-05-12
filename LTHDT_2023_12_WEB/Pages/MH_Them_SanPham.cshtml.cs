@@ -33,6 +33,7 @@ namespace LTHDT_2023_12_WEB.Pages
             DanhSachLoaiSanPham = _xuLyLoaiSanPham.DocDanhSachLoaiSanPham();
             try
             {
+                _xuLySanPham.KiemTraTenSanPham(TenSp);
                 var sp = new SanPham(TenSp, Gia, HanSuDung,CongTySanXuat,NamSanXuat,LoaiSanPham);
                 _xuLySanPham.ThemSanPham(sp);
                 Response.Redirect("/MH_DanhSach_SanPham");

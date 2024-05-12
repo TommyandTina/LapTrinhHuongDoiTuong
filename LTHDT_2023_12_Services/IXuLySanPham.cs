@@ -16,5 +16,6 @@ namespace LTHDT_2023_12_Services
         void SuaSanPham(SanPham sanPham);
         //neu them thi so luong them vao la so duong, con giam thi la so am
         int CapNhatSoLuongSanPham(int maSanPham, int soLuongDuocThemVao);
+        public void KiemTraTenSanPham(string tenSanPham);
     }
 }

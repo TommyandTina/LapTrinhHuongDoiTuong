@@ -1,0 +1,36 @@
+﻿@page
+@using LTHDT_2023_12_Entities
+@model LTHDT_2023_12_WEB.Pages.Pages_ThongKe.ThongKeSoLuongSanPhamModel
+@{
+}
+<form method="post">
+  <label for="fname">Nhập tên sản phẩm cần tìm:</label><br>
+  <input type="text" id="khongquantrong" name="TuKhoa" value=""><br>
+  <input type="submit" value="Tìm Kiếm">
+</form> 
+
+
+<div> 
+    <table>
+        <tr>
+            <th>Mã Sản Phẩm</th>
+            <th>Tên Sản phẩm</th>
+            <th>Số Lượng</th>
+        </tr>
+        @foreach (SanPham sp in Model.DanhSachSanPham)
+        {
+            <tr>
+                <td>@sp.MaSanPham</td>
+                <td>@sp.TenSanPham</td>
+                <td>@sp.SoLuong</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+@Model.Chuoi
+
+<div>
+    <a href="/Privacy">Danh sách các Page</a>
+</div>

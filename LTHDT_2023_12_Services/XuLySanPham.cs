@@ -70,5 +70,17 @@ namespace LTHDT_2023_12_Services
             }
             return 0;
         }
+
+        public void KiemTraTenSanPham(string tenSanPham)
+        {
+            var dssp = _luuTruSanPham.DocDanhSachSanPham();
+            foreach (var sp in dssp)
+            {
+                if (sp.TenSanPham == tenSanPham)
+                {
+                    throw new Exception("Ten san pham da ton tai");
+                }
+            }
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_HoaDonNhapHang
 
         private IXuLyHoaDonNhapHang _xuLyHoaDonNhapHang = new XuLyHoaDonNhapHang();
         public List<HoaDonNhapHang> DanhSachHoaDonNhapHang;
-
+        private IXuLySanPham _xuLySanPham = new XuLySanPham();
 
         public void OnGet(int maHoaDonInput)
         {
@@ -43,7 +43,9 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_HoaDonNhapHang
 
             try
             {
+                HoaDonNhapHang getHoaDonCu = _xuLyHoaDonNhapHang.DocDanhSachHoaDon(maHoaDon)[0];
                 HoaDonNhapHang hoaDon = new HoaDonNhapHang(maHoaDon, sanPham.MaSanPham, sanPham.TenSanPham, sanPham.Gia, TenCongTyBan, SoLuongNhap,ThanhTien);
+                _xuLySanPham.CapNhatSoLuongSanPham(sanPham.MaSanPham, SoLuongNhap - getHoaDonCu.SoLuongNhap);
                 _xuLyHoaDonNhapHang.SuaHoaDon(hoaDon);
             }
             catch (Exception ex)

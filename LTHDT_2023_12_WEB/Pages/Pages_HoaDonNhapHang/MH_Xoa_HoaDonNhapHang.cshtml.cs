@@ -15,7 +15,7 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_HoaDonNhapHang
 
         private IXuLyHoaDonNhapHang _xuLyHoaDonNhapHang = new XuLyHoaDonNhapHang();
         public List<HoaDonNhapHang> DanhSachHoaDonNhapHang;
-
+        private IXuLySanPham _xuLySanPham = new XuLySanPham();
         public void OnGet(int maHoaDonInput)
         {
             maHoaDon = maHoaDonInput;
@@ -24,15 +24,25 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_HoaDonNhapHang
 
         public void OnPost()
         {
-            found = _xuLyHoaDonNhapHang.XoaHoaDon(maHoaDon);
-            if (found == 1)
+            try
             {
-                Response.Redirect("MH_DanhSach_HoaDonNhapHang");
+                HoaDonNhapHang getHoaDonCu = _xuLyHoaDonNhapHang.DocDanhSachHoaDon(maHoaDon)[0];
+                _xuLySanPham.CapNhatSoLuongSanPham(getHoaDonCu.sanPham.MaSanPham, -getHoaDonCu.SoLuongNhap);
+
+                found = _xuLyHoaDonNhapHang.XoaHoaDon(maHoaDon);
+                if (found == 1)
+                {
+                    Response.Redirect("MH_DanhSach_HoaDonNhapHang");
+                }
+                if (found == -1)
+                {
+                    Chuoi = "Vui long nhap lai ma san pham de xoa";
+                }
             }
-            if (found == -1)
+            catch (Exception ex)
             {
-                Chuoi = "Vui long nhap lai ma san pham de xoa";
+                Chuoi = ex.Message;
             }
-        }
+}
     }
 }

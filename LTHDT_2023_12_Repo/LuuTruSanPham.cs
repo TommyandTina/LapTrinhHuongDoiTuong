@@ -73,8 +73,15 @@ namespace LTHDT_2023_12_Repo
             var sanPham = dssp.FirstOrDefault(sp => sp.MaSanPham == maSanPham);
             if (sanPham != null)
             {
-                sanPham.SoLuong += soLuongDuocThemVao;
-                LuuDanhSachSanPham(dssp);
+                if (sanPham.SoLuong + soLuongDuocThemVao >= 0)
+                {
+                    sanPham.SoLuong += soLuongDuocThemVao;
+                    LuuDanhSachSanPham(dssp);
+                }
+                else
+                {
+                    throw new Exception("So Luong San Pham da am, khong the thuc hien thao tac nay");
+                }
             }
         }
     }
