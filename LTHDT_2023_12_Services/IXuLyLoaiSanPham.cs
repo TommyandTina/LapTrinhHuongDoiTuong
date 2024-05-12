@@ -13,5 +13,7 @@ namespace LTHDT_2023_12_Services
         void ThemLoaiSanPham(LoaiSanPham loaiSanPham);
         int XoaLoaiSanPham(int maLoaiSanPham);
         void SuaLoaiSanPham(LoaiSanPham loaiSanPham);
+        public void KiemTraTenLoaiSanPham(string tenLoaiSanPham);
+        public void KiemTraTenLoaiSanPham(string tenLoaiSanPhamMoi, string tenLoaiSanPhamHienTai);
     }
 }

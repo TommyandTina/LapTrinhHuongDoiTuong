@@ -12,11 +12,11 @@ namespace LTHDT_2023_12_WEB.Pages
         [BindProperty]
         public string tenSanPham { get; set; }
         [BindProperty]
-        public string TuKhoa2 { get; set; }
+        public string tenSanPhamHienTai { get; set; }
         [BindProperty]
         public int giaSanPham { get; set; }
         [BindProperty]
-        public int HanSuDung { get; set; }
+        public string HanSuDung { get; set; }
         [BindProperty]
         public string CongTySanXuat { get; set; }
         [BindProperty]
@@ -41,6 +41,7 @@ namespace LTHDT_2023_12_WEB.Pages
             DanhSachSanPham = _xuLySanPham.DocDanhSachSanPham(TuKhoa);
             //SanPham sanPham = DanhSachSanPham.FirstOrDefault(sp => sp.MaSanPham == maSanPham);
             tenSanPham = TuKhoa;
+            tenSanPhamHienTai = TuKhoa;
             giaSanPham = DanhSachSanPham[0].Gia;
             HanSuDung = DanhSachSanPham[0].HanSuDung;
             CongTySanXuat = DanhSachSanPham[0].CongTySanXuat;
@@ -62,9 +63,12 @@ namespace LTHDT_2023_12_WEB.Pages
         public void OnPost()
         {
             DanhSachLoaiSanPham = _xuLyLoaiSanPham.DocDanhSachLoaiSanPham();
+            //DanhSachSanPham = _xuLySanPham.DocDanhSachSanPham(tenSanPham);
+            //string tenSanPhamHienTai = DanhSachSanPham[0].TenSanPham;
             try
             {
-                _xuLySanPham.KiemTraTenSanPham(tenSanPham);
+                _xuLySanPham.KiemTraNgayThangValid(HanSuDung);
+                _xuLySanPham.KiemTraTenSanPham(tenSanPham, tenSanPhamHienTai);
                 SanPham sanPham = new SanPham(maSanPham, tenSanPham, giaSanPham, HanSuDung, CongTySanXuat, NamSanXuat, LoaiSanPham, SoLuong);
                 _xuLySanPham.SuaSanPham(sanPham);
             }

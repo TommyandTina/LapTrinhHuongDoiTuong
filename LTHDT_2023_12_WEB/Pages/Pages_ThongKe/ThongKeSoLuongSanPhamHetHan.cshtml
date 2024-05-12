@@ -1,12 +1,13 @@
 ﻿@page
 @using LTHDT_2023_12_Entities
-@model LTHDT_2023_12_WEB.Pages.Pages_ThongKe.ThongKeSoLuongSanPhamModel
+@model LTHDT_2023_12_WEB.Pages.Pages_ThongKe.ThongKeSoLuongSanPhamHetHanModel
 @{
 }
 
 <div class="text-center">
-    <h1 class="display-9">Thống Kê Số Lượng Sản Phẩm</h1>
+    <h1 class="display-9">Thống Kê Số Lượng Sản Phẩm Hết Hạn</h1>
 </div>
+
 <form method="post">
   <label for="fname">Nhập tên sản phẩm cần tìm:</label><br>
   <input type="text" id="khongquantrong" name="TuKhoa" value=""><br>
@@ -19,14 +20,14 @@
         <tr>
             <th>Mã Sản Phẩm</th>
             <th>Tên Sản phẩm</th>
-            <th>Số Lượng</th>
+            <th>Hạn Sử Dụng</th>
         </tr>
-        @foreach (SanPham sp in Model.DanhSachSanPham)
+        @foreach (SanPham sp in Model.DanhSachSanPhamQuaHan)
         {
             <tr>
                 <td>@sp.MaSanPham</td>
                 <td>@sp.TenSanPham</td>
-                <td>@sp.SoLuong</td>
+                <td>@sp.HanSuDung</td>
             </tr>
         }
     </table>

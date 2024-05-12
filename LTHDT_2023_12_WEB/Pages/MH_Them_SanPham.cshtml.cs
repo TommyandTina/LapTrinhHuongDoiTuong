@@ -12,7 +12,7 @@ namespace LTHDT_2023_12_WEB.Pages
         [BindProperty]
         public int Gia { get; set; }
         [BindProperty]
-        public int HanSuDung { get; set; }
+        public string HanSuDung { get; set; }
         [BindProperty]
         public string CongTySanXuat { get; set; }
         [BindProperty]
@@ -34,6 +34,7 @@ namespace LTHDT_2023_12_WEB.Pages
             try
             {
                 _xuLySanPham.KiemTraTenSanPham(TenSp);
+                _xuLySanPham.KiemTraNgayThangValid(HanSuDung);
                 var sp = new SanPham(TenSp, Gia, HanSuDung,CongTySanXuat,NamSanXuat,LoaiSanPham);
                 _xuLySanPham.ThemSanPham(sp);
                 Response.Redirect("/MH_DanhSach_SanPham");

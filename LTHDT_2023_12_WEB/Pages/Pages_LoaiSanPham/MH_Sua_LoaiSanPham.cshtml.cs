@@ -12,6 +12,8 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_LoaiSanPham
 
         [BindProperty]
         public string loaiSanPham { get; set; }
+        [BindProperty]
+        public string loaiSanPhamHienTai { get; set; }
 
         public string Chuoi { get; set; } = string.Empty;
         public int found { get; set; } = 0;
@@ -25,6 +27,7 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_LoaiSanPham
             maLoaiSanPham = maLoaiSanPhamInput;
             DanhSachLoaiSanPham = _xuLyLoaiSanPham.DocDanhSachLoaiSanPham(tenLoaiSanPham);
             loaiSanPham = DanhSachLoaiSanPham[0].loaiSanPham;
+            loaiSanPhamHienTai = tenLoaiSanPham;
         }
 
         public void OnPost()
@@ -32,6 +35,7 @@ namespace LTHDT_2023_12_WEB.Pages.Pages_LoaiSanPham
 
             try
             {
+                _xuLyLoaiSanPham.KiemTraTenLoaiSanPham(loaiSanPham,loaiSanPhamHienTai);
                 LoaiSanPham loaiSp = new LoaiSanPham(maLoaiSanPham, loaiSanPham);
                 _xuLyLoaiSanPham.SuaLoaiSanPham(loaiSp);
             }

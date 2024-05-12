@@ -3,7 +3,9 @@
 @using LTHDT_2023_12_Entities
 @{
 }
-
+<div class="text-center">
+    <h1 class="display-9">Danh Sách Sản Phẩm </h1>
+</div>
 <form method="post">
   <label for="fname">Nhập tên sản phẩm cần tìm:</label><br>
   <input type="text" id="khongquantrong" name="TuKhoa" value=""><br>
@@ -56,6 +58,9 @@
 @Model.Chuoi
 <div>
     <a href="/Pages_ThongKe/ThongKeSoLuongSanPham">Thống Kê Số Lượng Sản Phẩm</a>
+</div>
+<div>
+    <a href="/Pages_ThongKe/ThongKeSoLuongSanPhamHetHan">Thống Kê Số Lượng Sản Phẩm Hết Hạn</a>
 </div>
 <div>
     <a href="/Privacy">Danh sách các Page</a>

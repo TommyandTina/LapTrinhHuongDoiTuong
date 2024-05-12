@@ -1,5 +1,6 @@
 ﻿using LTHDT_2023_12_Entities;
 using LTHDT_2023_12_Repo;
+using System.Globalization;
 
 namespace LTHDT_2023_12_Services
 {
@@ -80,6 +81,47 @@ namespace LTHDT_2023_12_Services
                 {
                     throw new Exception("Ten san pham da ton tai");
                 }
+            }
+        }
+
+        public void KiemTraTenSanPham(string tenSanPhamMoi, string tenSanPhamHienTai)
+        {
+            var dssp = _luuTruSanPham.DocDanhSachSanPham();
+            foreach (var sp in dssp)
+            {
+                if (sp.TenSanPham == tenSanPhamMoi && sp.TenSanPham != tenSanPhamHienTai)
+                {
+                    throw new Exception("Ten san pham da ton tai");
+                }
+            }
+        }
+
+        public void KiemTraNgayThangValid(string hanSuDung)
+        {
+            DateTime dateTime;
+            if (DateTime.TryParseExact(hanSuDung, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime))
+            {
+                //string formattedDate = dateTime.ToString("dd/MM/yyyy"); //return a string
+            }
+            else
+            {
+                throw new Exception("Ngay thang nam khong hop le");
+            }
+        }
+
+        public bool SoSanh_Date_vs_Today(string hanSuDung)
+        {
+            DateTime dateTime;
+            DateTime.TryParseExact(hanSuDung, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime);
+            DateTime currentDate = DateTime.Today;
+            if (currentDate > dateTime)
+            {
+                //da qua han
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
