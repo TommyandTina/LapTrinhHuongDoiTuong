@@ -10,7 +10,7 @@ namespace LTHDT_2023_12_Repo
 {
     public class LuuTruHoaDonNhapHang :ILuuTruHoaDonNhapHang
     {
-        private string _filePath = "E:\\hdnh.txt";//thêm đường dẫn vào
+        private string _filePath = "hdnh.txt";//thêm đường dẫn vào
 
         public List<HoaDonNhapHang> DocDanhSachHoaDon()
         {

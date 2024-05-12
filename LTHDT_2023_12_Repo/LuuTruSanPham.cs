@@ -4,7 +4,7 @@ namespace LTHDT_2023_12_Repo
 {
     public class LuuTruSanPham :ILuuTruSanPham
     {
-        private string _filePath = "E:\\dssp.txt";//thêm đường dẫn vào
+        private string _filePath = "dssp.txt";//thêm đường dẫn vào
         public List<SanPham> DocDanhSachSanPham()
         {
             List<SanPham> dsSanPham = new List<SanPham>();
