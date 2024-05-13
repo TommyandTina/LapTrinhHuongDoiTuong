@@ -7,7 +7,7 @@
 
 <form method="post">
   <label for="fname">Mã sản phẩm hiện tại: @Model.maSanPham</label><br>
-  <input type="text" id="khongquantrong" name="maSanPham" value="@Model.maSanPham (không thể sửa)" readonly><br>
+  <input type="text" id="khongquantrong" name="maSanPham" value="@Model.maSanPham" readonly><br>
   <label for="fname">Tên sản phẩm mới:</label><br>
   <input type="text" id="khongquantrong" name="tenSanPham" value="@Model.tenSanPham" ><br>
   <label for="fname">Giá mới:</label><br>
@@ -27,7 +27,7 @@
     }
   </select><br>
   <label for="fname">Số Lượng:</label><br>
-  <input type="text" id="khongquantrong" name="SoLuong" value="@Model.SoLuong  (không thể sửa)" readonly><br>
+  <input type="text" id="khongquantrong" name="SoLuong" value="@Model.SoLuong" readonly><br>
   <input type="hidden" value="@Model.tenSanPhamHienTai" name="tenSanPhamHienTai"/> 
   <input type="submit" value="Thay đổi">
 </form>
